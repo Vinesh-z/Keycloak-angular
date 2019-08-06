@@ -8,12 +8,21 @@ import { KeycloakService } from 'keycloak-angular';
 })
 export class HomeComponent implements OnInit {
   loggedIn: boolean;
+  userDetails: any;
+  profileImage: String;
   constructor(protected keycloakAngular: KeycloakService) { }
 
   ngOnInit() {
-    this.keycloakAngular.isLoggedIn().then(data=>{
+    this.keycloakAngular.isLoggedIn().then(data => {
       this.loggedIn = data;
     });
+
+    try {
+      this.userDetails = this.keycloakAngular.getKeycloakInstance().tokenParsed;
+      this.profileImage = this.userDetails.avatar;
+    } catch (e) {
+      console.log('Failed to load user details', e);
+    }
   }
 
   logout() {

@@ -18,3 +18,15 @@
 .logout {
     padding-top: 0.5rem;
 }
+
+.profile-image {
+    height: 10rem;
+    width: 10rem;
+    border: 1px solid black;
+}
+
+.image-div {
+    margin-top: 2rem;
+    text-align: center;
+    justify-content: center;
+}

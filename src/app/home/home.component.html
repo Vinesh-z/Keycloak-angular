@@ -2,15 +2,18 @@
     <div class="row">
         <div class="w-100">
             <span class="float-right logout">
-            <button *ngIf="loggedIn" (click)="logout()" class="btn btn-danger ">Logout</button>
-        </span>
+                <button *ngIf="loggedIn" (click)="logout()" class="btn btn-danger ">Logout</button>
+            </span>
         </div>
     </div>
     <span class="float-left w-100 text-center heading">
         <h1>MY KEYCLOAK APP</h1>
-      </span>
+    </span>
     <div class="row button-row">
         <button type="button" class="btn btn-primary nav-button" routerLink="list">Get Data</button>
         <button type="button" class="btn btn-success nav-button" routerLink="add">Add Data</button>
+    </div>
+    <div class="image-div">
+        <img class="profile-image" src={{profileImage}}>
     </div>
 </div>

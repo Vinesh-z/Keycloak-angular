@@ -19,4 +19,19 @@ export class ApiService {
   postItem(item: Item): Observable<any> {
     return this.http.post(this.apiUrl + '/admin/add-data', item);
   }
+
+
+  // getTokenKeyCloak(username, password) {
+  //   let headers = new HttpHeaders();
+  //   headers = headers.append('Content-Type', 'application/x-www-form-urlencoded');
+
+
+  //   const data = {
+  //     client_id: 'front-end',
+  //     username: username ,
+  //     password: password ,
+  //     grant_type: 'password'
+  //   };
+  //   return this.http.post('auth/realms/master/protocol/openid-connect/token', data, { headers: headers });
+  // }
 }
