@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { KeycloakService } from 'keycloak-angular';
+import { ToastrManager } from 'ng6-toastr-notifications';
 
 @Component({
   selector: 'app-home',
@@ -10,7 +11,7 @@ export class HomeComponent implements OnInit {
   loggedIn: boolean;
   userDetails: any;
   profileImage: String;
-  constructor(protected keycloakAngular: KeycloakService) { }
+  constructor(public toastr: ToastrManager, protected keycloakAngular: KeycloakService) { }
 
   ngOnInit() {
     this.keycloakAngular.isLoggedIn().then(data => {

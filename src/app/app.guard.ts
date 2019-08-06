@@ -2,13 +2,14 @@ import { Injectable } from '@angular/core';
 import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { KeycloakAuthGuard, KeycloakService } from '../../node_modules/keycloak-angular';
+import { ToastrManager } from 'ng6-toastr-notifications';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AppGuard extends KeycloakAuthGuard {
 
-  constructor(protected router: Router, protected keycloakAngular: KeycloakService) {
+  constructor(public toastr: ToastrManager, protected router: Router, protected keycloakAngular: KeycloakService) {
     super(router, keycloakAngular);
   }
 
@@ -35,6 +36,7 @@ export class AppGuard extends KeycloakAuthGuard {
       }
 
       if (granted === false) {
+        this.toastr.errorToastr('Access Denied', 'Oops!!');
         this.router.navigate(['/']);
       }
       resolve(granted);

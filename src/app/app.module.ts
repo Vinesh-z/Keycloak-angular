@@ -9,7 +9,8 @@ import { AddComponent } from './add/add.component';
 import { HttpClientModule } from '../../node_modules/@angular/common/http';
 import { KeycloakService, KeycloakAngularModule } from '../../node_modules/keycloak-angular';
 import { initializer } from '../app.init';
-
+import { ToastrModule } from 'ng6-toastr-notifications';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,6 +19,9 @@ import { initializer } from '../app.init';
     AddComponent
   ],
   imports: [
+    BrowserAnimationsModule,
+    ToastrModule,
+    ToastrModule.forRoot(),
     BrowserModule,
     AppRoutingModule,
     KeycloakAngularModule,

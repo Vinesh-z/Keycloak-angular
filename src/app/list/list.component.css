@@ -2,6 +2,10 @@
     margin-top: 0.4rem;
 }
 
+.nav-button {
+    margin-top: 1rem;
+}
+
 .item-name,
 .item-heading {
     text-align: center;

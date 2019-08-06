@@ -1,11 +1,12 @@
 <div class="container">
-  <div class="row">
-    <form (ngSubmit)="addData()" #f="ngForm">
-      <div class="form-group">
-        <label for="itemName">Item Name</label>
-        <input class="form-control" ngModel name="itemName" placeholder="Enter Item Name">
-      </div>
-      <button type="submit" class="btn btn-success">Add Data</button>
-    </form>
-  </div>
+    <button type="button" class="btn btn-primary nav-button" routerLink="/">Back Home</button>
+    <div class="row">
+        <form (ngSubmit)="addData()" #f="ngForm">
+            <div class="form-group">
+                <label for="itemName">Item Name</label>
+                <input class="form-control" ngModel name="itemName" placeholder="Enter Item Name">
+            </div>
+            <button type="submit" class="btn btn-success">Add Data</button>
+        </form>
+    </div>
 </div>
