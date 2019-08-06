@@ -1,0 +1,20 @@
+.btn-primary {
+    margin-right: 2rem;
+}
+
+.btn-success {
+    margin-left: 2rem;
+}
+
+.button-row {
+    text-align: center;
+    justify-content: center;
+}
+
+.button-row {
+    margin-top: 10%;
+}
+
+.logout {
+    padding-top: 0.5rem;
+}
