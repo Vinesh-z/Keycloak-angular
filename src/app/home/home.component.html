@@ -3,6 +3,7 @@
         <div class="w-100">
             <span class="float-right logout">
                 <button *ngIf="loggedIn" (click)="logout()" class="btn btn-danger ">Logout</button>
+                <button *ngIf="!loggedIn" (click)="login()" class="btn btn-success ">Login</button>
             </span>
         </div>
     </div>
@@ -13,7 +14,10 @@
         <button type="button" class="btn btn-primary nav-button" routerLink="list">Get Data</button>
         <button type="button" class="btn btn-success nav-button" routerLink="add">Add Data</button>
     </div>
-    <div class="image-div">
+    <div *ngIf="userDetails" class="image-div">
         <img class="profile-image" src={{profileImage}}>
+    </div>
+    <div *ngIf="userDetails" class="username">
+        <h5> Hello {{userDetails?.name}}</h5>
     </div>
 </div>

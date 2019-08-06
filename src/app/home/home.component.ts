@@ -19,6 +19,7 @@ export class HomeComponent implements OnInit {
 
     try {
       this.userDetails = this.keycloakAngular.getKeycloakInstance().tokenParsed;
+      console.log(this.userDetails.name);
       this.profileImage = this.userDetails.avatar;
     } catch (e) {
       console.log('Failed to load user details', e);
@@ -27,6 +28,10 @@ export class HomeComponent implements OnInit {
 
   logout() {
     this.keycloakAngular.logout();
+  }
+
+  login() {
+    this.keycloakAngular.login();
   }
 
 }
