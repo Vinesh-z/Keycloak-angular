@@ -34,5 +34,7 @@ export class HomeComponent implements OnInit {
   login() {
     this.keycloakAngular.login();
   }
-
+  update() {
+    window.location.href = 'http://localhost:8080/auth/realms/Role-Based/account/?referrer=front-end';
+  }
 }
