@@ -2,23 +2,23 @@
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
-// export const environment = {
-//   production: false,
-//   baseUrl: "http://localhost:8000",
-//   keycloakBaseUrl: "http://localhost:8080/auth",
-//   keycloakRealm: 'demo',
-//   keycloakClient: 'angular-app'
-
-// };
-
 export const environment = {
   production: false,
   baseUrl: "http://localhost:8000",
   keycloakBaseUrl: "http://localhost:8080/auth",
-  keycloakRealm: 'Role-Based',
-  keycloakClient: 'front-end'
+  keycloakRealm: 'demo',
+  keycloakClient: 'angular-app'
 
 };
+
+// export const environment = {
+//   production: false,
+//   baseUrl: "http://localhost:8000",
+//   keycloakBaseUrl: "http://localhost:8080/auth",
+//   keycloakRealm: 'Role-Based',
+//   keycloakClient: 'front-end'
+
+// };
 
 /*
  * For easier debugging in development mode, you can import the following file
